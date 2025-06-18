@@ -3,8 +3,13 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     try {
+        const data = {
+            ...req.body,
+            nascto: req.body.nascto ? new Date(req.body.nascto) : null, // converte para Date ou null
+        };
+
         const aluno = await prisma.aluno.create({
-            data: req.body
+            data
         });
         return res.status(201).json(aluno);
     } catch (error) {
@@ -38,11 +43,16 @@ const readOne = async (req, res) => {
 
 const update = async (req, res) => {
     try {
+        const data = {
+            ...req.body,
+            nascto: req.body.nascto ? new Date(req.body.nascto) : undefined, // converte para Date se existir
+        };
+
         const aluno = await prisma.aluno.update({
             where: {
                 ra: req.params.ra
             },
-            data: req.body
+            data
         });
         return res.status(202).json(aluno);
     } catch (error) {

@@ -10,16 +10,19 @@ const create = async (req, res) => {
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
-}
+};
 
 const read = async (req, res) => {
     const turmas = await prisma.turma.findMany();
     return res.json(turmas);
-}
+};
 
 const readOne = async (req, res) => {
     try {
         const turma = await prisma.turma.findUnique({
+            where: {
+                id: Number(req.params.id)
+            },
             select: {
                 id: true,
                 nome: true,
@@ -28,27 +31,27 @@ const readOne = async (req, res) => {
                     select: {
                         id: true,
                         nome: true,
-                        alunos: {
+                        leciona: {
                             select: {
                                 id: true,
                                 nome: true
                             }
                         },
-                        professores: {
+                        matriculas: {
                             select: {
-                                id: true,
-                                nome: true
+                                faz: {
+                                    select: {
+                                        ra: true,
+                                        nome: true
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            },
-            where: {
-                id: Number(req.params.id)
             }
         });
 
-        // Verifica se a turma foi encontrada
         if (!turma) {
             return res.status(404).json({ error: 'Turma não encontrada' });
         }
@@ -71,7 +74,7 @@ const update = async (req, res) => {
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
-}
+};
 
 const remove = async (req, res) => {
     try {
@@ -84,6 +87,6 @@ const remove = async (req, res) => {
     } catch (error) {
         return res.status(404).json({ error: error.message });
     }
-}
+};
 
 module.exports = { create, read, readOne, update, remove };
