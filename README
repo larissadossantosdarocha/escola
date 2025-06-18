@@ -1,0 +1,162 @@
+{
+	"id": 1,
+	"nome": "Turma A",
+	"ano": 2025,
+	"disciplinas": [
+		{
+			"id": 1,
+			"nome": "Matemática Básica",
+			"leciona": {
+				"id": 1,
+				"nome": "Professor 1"
+			},
+			"matriculas": [
+				{
+					"faz": {
+						"ra": "RA1001",
+						"nome": "Aluno 1"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1002",
+						"nome": "Aluno 2"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1011",
+						"nome": "Aluno 11"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1001",
+						"nome": "Aluno 1"
+					}
+				}
+			]
+		},
+		{
+			"id": 2,
+			"nome": "Física Geral",
+			"leciona": {
+				"id": 2,
+				"nome": "Professor Maria"
+			},
+			"matriculas": [
+				{
+					"faz": {
+						"ra": "RA1003",
+						"nome": "Aluno 3"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1004",
+						"nome": "Aluno 4"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1012",
+						"nome": "Aluno 12"
+					}
+				}
+			]
+		},
+		{
+			"id": 3,
+			"nome": "Química Orgânica",
+			"leciona": {
+				"id": 3,
+				"nome": "Professor Carlos"
+			},
+			"matriculas": [
+				{
+					"faz": {
+						"ra": "RA1005",
+						"nome": "Aluno 5"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1006",
+						"nome": "Aluno 6"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1013",
+						"nome": "Aluno 13"
+					}
+				}
+			]
+		},
+		{
+			"id": 4,
+			"nome": "Biologia Molecular",
+			"leciona": {
+				"id": 4,
+				"nome": "Professor Ana"
+			},
+			"matriculas": [
+				{
+					"faz": {
+						"ra": "RA1007",
+						"nome": "Aluno 7"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1008",
+						"nome": "Aluno 8"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1014",
+						"nome": "Aluno 14"
+					}
+				}
+			]
+		},
+		{
+			"id": 5,
+			"nome": "História do Brasil",
+			"leciona": {
+				"id": 5,
+				"nome": "Professor Pedro"
+			},
+			"matriculas": [
+				{
+					"faz": {
+						"ra": "RA1009",
+						"nome": "Aluno 9"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1010",
+						"nome": "Aluno 10"
+					}
+				},
+				{
+					"faz": {
+						"ra": "RA1015",
+						"nome": "Aluno 15"
+					}
+				}
+			]
+		},
+		{
+			"id": 6,
+			"nome": "Matemática",
+			"leciona": {
+				"id": 1,
+				"nome": "Professor 1"
+			},
+			"matriculas": []
+		}
+	]
+}
